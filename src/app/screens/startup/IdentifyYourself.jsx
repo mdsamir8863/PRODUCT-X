@@ -46,7 +46,7 @@ const IdentifyYourself = () => {
 
   return (
     <>
-      <section className="flex w-full justify-between items-start">
+      <section className="flex w-full justify-between items-center">
         <div className="flex flex-col items-start w-full gap-4 md:ms-10 p-3 md:w-[575px]">
           <h1 className="font-bold text-3xl">Welcome Samir!</h1>
           <p className="text-gray-500">

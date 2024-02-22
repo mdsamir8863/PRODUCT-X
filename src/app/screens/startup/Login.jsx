@@ -45,7 +45,9 @@ const Login = () => {
                   Remember Me
                 </label>
               </div>
-              <Link className="text-blue-600">Forget Password?</Link>
+              <Link to={"/login/forget"} className="text-blue-600">
+                Forget Password?
+              </Link>
             </div>
             <button className="uppercase bg-blue-500 font-bold hover:bg-blue-600 text-white w-full rounded py-3">
               Log in
@@ -59,7 +61,7 @@ const Login = () => {
           </p>
           <p className="">
             Problems or questions?
-            <Link to={"/register"} className="text-blue-600 ms-1">
+            <Link to={""} className="text-blue-600 ms-1">
               Contact Us
             </Link>
           </p>
