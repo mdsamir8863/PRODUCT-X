@@ -45,7 +45,7 @@ const Register = () => {
                 id="link-checkbox"
                 type="checkbox"
                 value=""
-                className="md:w-4 md:h-4 w-5 h-5 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 "
+                className="md:w-4 md:h-4 w-5 h-5 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-saffron "
               />
               <label
                 htmlFor="link-checkbox"
@@ -54,26 +54,29 @@ const Register = () => {
                 I agree with the
                 <a
                   href="#"
-                  className="text-blue-600 mx-1 dark:text-blue-500 hover:underline"
+                  className="text-blue-600 mx-1 dark:text-saffron hover:text-dark-saffron hover:underline"
                 >
                   Privacy Policy
                 </a>
                 and
                 <a
                   href="#"
-                  className="text-blue-600 ms-1 dark:text-blue-500 hover:underline"
+                  className="text-blue-600 ms-1 dark:text-saffron hover:text-dark-saffron hover:underline"
                 >
                   Terms & Conditions
                 </a>
               </label>
             </div>
-            <button className="uppercase bg-blue-500 font-bold hover:bg-blue-600 text-white w-full rounded py-3">
+            <button className="uppercase bg-saffron font-bold hover:bg-dark-saffron text-white w-full rounded py-3">
               Sign Up
             </button>
           </div>
           <p className="">
             Already have an account ?
-            <Link to={"/login"} className="text-blue-500 ms-1">
+            <Link
+              to={"/login"}
+              className="text-saffron hover:text-dark-saffron ms-1"
+            >
               Log In
             </Link>
           </p>

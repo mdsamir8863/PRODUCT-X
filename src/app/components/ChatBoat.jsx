@@ -1,7 +1,7 @@
 const ChatBoat = () => {
   return (
     <>
-      <button className="bg-blue-600 text-white flex items-center justify-center shadow-lg shadow-black w-12 h-12 rounded-full fixed p-2 bottom-5 right-5">
+      <button className="bg-saffron text-white flex items-center justify-center shadow-lg shadow-black w-12 h-12 rounded-full fixed z-50 p-2 bottom-5 right-5">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"

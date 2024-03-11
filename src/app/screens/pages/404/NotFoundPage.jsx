@@ -1,5 +1,5 @@
-import PrivacyPolicy from "../../components/PrivacyPolicy";
-import NotFountImg from "../../../assets/404-page-animation-example.gif";
+import PrivacyPolicy from "../../../components/PrivacyPolicy";
+import NotFountImg from "../../../../assets/404-page-animation-example.gif";
 import { Link } from "react-router-dom";
 const NotFoundPage = () => {
   return (
@@ -14,7 +14,7 @@ const NotFoundPage = () => {
         <h1 className="text-4xl font-bold text-gray-800 mb-2">
           Oops! Page not found!
         </h1>
-        <p className="text-gray-600 mb-8">
+        <p className="text-gray-600 px-5 mb-8 md:w-[29rem]">
           We are very sorry for the inconvenience. It looks like you&apos;re
           trying to access a page that has been deleted or never even existed.
         </p>

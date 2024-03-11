@@ -36,7 +36,7 @@ const Login = () => {
                   id="link-checkbox"
                   type="checkbox"
                   value=""
-                  className="md:w-4 md:h-4 w-5 h-5 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 "
+                  className="md:w-4 md:h-4 w-5 h-5 text-saffron hover:text-dark-saffron bg-gray-100 border-gray-300 rounded focus:ring-blue-500 "
                 />
                 <label
                   htmlFor="link-checkbox"
@@ -45,23 +45,23 @@ const Login = () => {
                   Remember Me
                 </label>
               </div>
-              <Link to={"/login/forget"} className="text-blue-600">
+              <Link to={"/login/forget"} className="text-saffron hover:text-dark-saffron">
                 Forget Password?
               </Link>
             </div>
-            <button className="uppercase bg-blue-500 font-bold hover:bg-blue-600 text-white w-full rounded py-3">
+            <button className="uppercase bg-saffron font-bold hover:bg-dark-saffron text-white w-full rounded py-3">
               Log in
             </button>
           </div>
           <p className="">
             New to Product X?
-            <Link to={"/register"} className="text-blue-600 ms-1">
+            <Link to={"/register"} className="text-saffron hover:text-dark-saffron ms-1">
               Sign Up Now
             </Link>
           </p>
           <p className="">
             Problems or questions?
-            <Link to={""} className="text-blue-600 ms-1">
+            <Link to={""} className="text-saffron hover:text-dark-saffron ms-1">
               Contact Us
             </Link>
           </p>

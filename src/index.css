@@ -3,6 +3,13 @@
 @tailwind utilities;
 
 
+body,
+html {
+    background-color: #ffffff !important
+        /* color: white; */
+}
+
+
 .clr {
     color: #003873;
 }
@@ -24,14 +31,14 @@
 
 /* Track */
 ::-webkit-scrollbar-track {
-    background: #bdbdbd;
+    background: #e0e0e0;
 
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: #003873;
-    border-radius: 10px;
+    background: #FF9933;
+
 
 
     /* Border radius of the scrollbar thumb */
@@ -39,7 +46,108 @@
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-    background: #637698;
+    background: #CC6600;
 
     /* Color of the scrollbar thumb on hover */
+}
+
+
+
+.testimonial {
+    transition: opacity 0.5s ease;
+}
+
+.testimonial.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.testimonial.active {
+    opacity: 1;
+}
+
+
+
+
+
+
+
+
+
+.keen-slider {
+    display: flex;
+    /* Display testimonials in a single line */
+    /* overflow-x: auto; */
+    /* Allow horizontal scrolling if needed */
+    scroll-snap-type: x mandatory;
+    /* Enable snapping for each testimonial */
+
+    /* Hide scrollbar for WebKit browsers */
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* IE and Edge */
+}
+
+.keen-slider::-webkit-scrollbar {
+    display: none;
+    /* Hide scrollbar for WebKit-based browsers */
+}
+
+.keen-slider__slide {
+    flex: 0 0 auto;
+    /* Ensure each testimonial occupies its own space */
+    scroll-snap-align: start;
+    /* Ensure each testimonial snaps to the start */
+}
+
+
+
+
+
+a,
+.mbNav {
+    border: 1px solid transparent;
+}
+
+
+
+
+
+
+
+
+
+@keyframes arrow-move {
+    0% {
+        transform: translateX(-20%);
+        scale: 1;
+    }
+
+    25% {
+        color: #3eba00;
+    }
+
+    50% {
+        color: #2a2394;
+    }
+
+    75% {
+        color: #009c6b;
+    }
+
+
+
+    100% {
+        transform: translateX(10%);
+        scale: 1.1;
+        color: #000000;
+
+    }
+}
+
+.animate-arrow {
+    animation: arrow-move 2s ease-out infinite;
+    animation-delay: 1s;
+    transition: 1s all;
 }

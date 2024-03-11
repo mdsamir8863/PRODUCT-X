@@ -32,13 +32,13 @@ const ForgetPassword = () => {
               />
               <button
                 onClick={() => setRecovery(true)}
-                className="uppercase bg-blue-500 font-bold hover:bg-blue-600 text-white w-full rounded py-3"
+                className="uppercase bg-saffron font-bold hover:bg-dark-saffron text-white w-full rounded py-3"
               >
                 RESET YOUR PASSWORD
               </button>
               <Link
                 to={"/login"}
-                className="uppercase border border-blue-500 font-bold hover:bg-blue-100 text-gray-800 w-full rounded py-3"
+                className="uppercase border border-saffron font-bold hover:bg-blue-100 text-gray-800 w-full rounded py-3"
               >
                 <button className=" uppercase font-bold  text-gray-800 w-full ">
                   log in
