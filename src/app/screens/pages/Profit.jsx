@@ -5,7 +5,7 @@ import { useState } from "react";
 const Sidebar = ({ isOpen, toggle }) => {
   return (
     <div
-      className={`fixed left-0 top-[66px] h-full backdrop-blur-md w-[17rem] p-2 flex flex-col items-center bg-[#003873] transition-all overflow-y-auto z-10 ${
+      className={`fixed left-0 top-0 h-full backdrop-blur-md w-[17rem] p-2 flex flex-col items-center bg-[#003873] transition-all overflow-y-auto z-10 ${
         isOpen ? "translate-x-0" : "-translate-x-full"
       }`}
     >

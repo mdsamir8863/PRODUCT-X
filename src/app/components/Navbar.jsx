@@ -149,15 +149,15 @@ const Navbar = () => {
                       Follow Up
                     </Link>
                     <Link
-                      to="/admotic"
+                      to="/adtomic"
                       className={`${
-                        activeTab === "admotic"
+                        activeTab === "adtomic"
                           ? " text-saffron border border-saffron"
                           : "text-dark-blue hover:border-saffron border-opacity-0  hover:border hover:text-saffron"
                       } rounded-md px-3 py-2 text-sm font-medium`}
-                      onClick={() => handleTabClick("admotic")}
+                      onClick={() => handleTabClick("adtomic")}
                       aria-current={
-                        activeTab === "admotic" ? "page" : undefined
+                        activeTab === "adtomic" ? "page" : undefined
                       }
                     >
                       Adtomic

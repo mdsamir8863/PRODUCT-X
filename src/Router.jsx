@@ -58,7 +58,7 @@ const Router = () => {
         <Route path="/markettracker" element={<MarketTracker />} />
 
         <Route path="profits" element={<Profit />} />
-        <Route path="followup" element={<FollowUp />} />
+        <Route path="follow-up" element={<FollowUp />} />
         <Route path="adtomic" element={<Adtomic />} />
 
         {/* Footer */}

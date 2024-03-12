@@ -10,13 +10,19 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.5.1",
+    "@fortawesome/free-solid-svg-icons": "^6.5.1",
+    "@fortawesome/react-fontawesome": "^0.2.0",
     "@tabler/icons-react": "^2.47.0",
     "clsx": "^2.1.0",
+    "country-flag-icons": "^1.5.9",
     "framer-motion": "^11.0.5",
     "keen-slider": "^6.8.6",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-flag-kit": "^1.1.1",
     "react-router-dom": "^6.22.1",
+    "react-select": "^5.8.0",
     "tailwind-merge": "^2.2.1"
   },
   "devDependencies": {
