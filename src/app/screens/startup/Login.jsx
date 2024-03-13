@@ -5,7 +5,7 @@ const Login = () => {
   return (
     <>
       <section>
-        <form className="container mx-auto gap-3 items-center flex-col flex p-3 md:w-[475px]">
+        <form className="container mt-4 mx-auto gap-3 items-center flex-col flex p-3 md:w-[475px]">
           <img className="w-24" src={Logo} alt="" />
           <p className="text-3xl font-bold text-[#003873]">
             Log In to Product X
@@ -49,7 +49,7 @@ const Login = () => {
                 Forget Password?
               </Link>
             </div>
-            <button className="uppercase bg-saffron font-bold hover:bg-dark-saffron text-white w-full rounded py-3">
+            <button onClick={()=>{}} className="uppercase bg-saffron font-bold hover:bg-dark-saffron text-white w-full rounded py-3">
               Log in
             </button>
           </div>

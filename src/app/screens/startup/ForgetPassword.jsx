@@ -38,17 +38,17 @@ const ForgetPassword = () => {
               </button>
               <Link
                 to={"/login"}
-                className="uppercase border border-saffron font-bold hover:bg-blue-100 text-gray-800 w-full rounded py-3"
+                className="uppercase border text-center border-saffron hover:bg-dark-blue hover:text-saffron font-bold  text-gray-800 w-full rounded py-3"
               >
-                <button className=" uppercase font-bold  text-gray-800 w-full ">
-                  log in
-                </button>
+                log in
               </Link>
             </div>
           )}
         </div>
 
-        <PrivacyPolicy />
+        <div className="absolute bottom-0 w-full">
+          <PrivacyPolicy />
+        </div>
       </section>
     </>
   );
