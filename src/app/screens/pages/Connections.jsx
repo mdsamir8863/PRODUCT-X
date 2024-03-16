@@ -13,7 +13,7 @@ const Connections = () => {
               Add and manage your connected seller and PPC accounts
             </p>
           </div>
-          <button className="flex gap-1 items-center hover:text-saffron text-sm bg-dark-blue border hover:bg-transparent h-8 rounded-md p-1 px-2 text-white">
+          <button className="flex gap-1 items-center hover:text-saffron text-sm bg-dark-blue border hover:bg-transparent h-8 rounded-full p-1 px-2 text-white">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -45,8 +45,8 @@ const Connections = () => {
             </p>
           </div>
           <Link
-            to={"/connections"}
-            className="border border-saffron rounded-md p-2 text-center bg-saffron text-white hover:bg-transparent hover:text-dark-blue duration-200"
+            to={"/choosePlatform"}
+            className="border border-saffron rounded-full p-2 text-center bg-saffron text-white hover:bg-transparent hover:text-dark-blue duration-200"
           >
             Connect your Seller Account
           </Link>
@@ -63,7 +63,7 @@ const Connections = () => {
           </div>
           <Link
             to={"/connections"}
-            className="border border-saffron rounded-md p-2 text-center bg-saffron text-white hover:bg-transparent hover:text-dark-blue duration-200"
+            className="border border-saffron rounded-full p-2 text-center bg-saffron text-white hover:bg-transparent hover:text-dark-blue duration-200"
           >
             Connect your Seller Account
           </Link>

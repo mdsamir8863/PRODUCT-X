@@ -39,7 +39,7 @@ const Dashboard = () => {
   return (
     <div className="flex">
       <button
-        className="fixed top-4 left-4 bg-gray-800 text-white px-2 py-1 rounded-md sm:hidden"
+        className="fixed top-4 left-4 bg-gray-800 text-white px-2 py-1 rounded-full sm:hidden"
         onClick={toggleSidebar}
       >
         {isSidebarOpen ? "Close" : "Open"}

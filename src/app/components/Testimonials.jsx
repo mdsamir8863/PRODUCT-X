@@ -66,7 +66,7 @@ const Testimonials = () => {
               <button
                 aria-label="Previous slide"
                 id="keen-slider-previous"
-                className="rounded-md-full border-2 px-3 py-1 hover:text-saffron border-saffron p-3 rounded-md"
+                className=" border-2 px-3 py-1 hover:text-saffron border-saffron p-3 rounded-full"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -87,7 +87,7 @@ const Testimonials = () => {
               <button
                 aria-label="Next slide"
                 id="keen-slider-next"
-                className="rounded-md-full border-2 px-3 py-1 hover:text-saffron border-saffron p-3  rounded-md "
+                className=" border-2 px-3 py-1 hover:text-saffron border-saffron p-3  rounded-full "
               >
                 <svg
                   className="size-5 rtl:rotate-180"
@@ -129,7 +129,7 @@ const Testimonials = () => {
                   </div>
 
                   <footer className="mt-2 text-sm font-medium text-gray-700 sm:mt-6">
-                    <button className="border-2 px-5 py-1 border-saffron rounded-md">
+                    <button className="border-2 px-5 py-1 hover:text-saffron border-saffron rounded-full">
                       Open Black Box
                     </button>
                   </footer>
@@ -137,7 +137,7 @@ const Testimonials = () => {
               </div>
 
               <div className="keen-slider__slide">
-                <blockquote className="flex h-full flex-col justify-between bg-white p-6 shadow-sm border rounded-md shadow-lg ">
+                <blockquote className="flex h-full flex-col justify-between bg-white p-6 shadow-sm border rounded-md">
                   <div>
                     <div className="flex gap-0.5 items-center justify-center text-saffron border-2 w-8 h-8 shadow border-saffron rounded-full ">
                       <p>2</p>
@@ -158,7 +158,7 @@ const Testimonials = () => {
                   </div>
 
                   <footer className="mt-2 text-sm font-medium text-gray-700 sm:mt-6">
-                    <button className=" flex items-center justify-center gap-1 border-2 px-3 py-1 hover:text-saffron border-saffron rounded-md">
+                    <button className=" flex items-center justify-center gap-1 border-2 px-3 py-1 hover:text-saffron border-saffron rounded-full">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         fill="none"
@@ -180,7 +180,7 @@ const Testimonials = () => {
               </div>
 
               <div className="keen-slider__slide">
-                <blockquote className="flex h-full flex-col justify-between bg-white p-6 shadow-sm border rounded-md shadow-lg ">
+                <blockquote className="flex h-full flex-col justify-between bg-white p-6 shadow-sm border rounded-md ">
                   <div>
                     <div className="flex gap-0.5 items-center justify-center text-saffron border-2 w-8 h-8 shadow border-saffron rounded-full ">
                       <p>3</p>
@@ -200,7 +200,7 @@ const Testimonials = () => {
                   </div>
 
                   <footer className="mt-2 text-sm font-medium text-gray-700 sm:mt-6">
-                    <button className="border-2 px-3 py-1 hover:text-saffron border-saffron rounded-md">
+                    <button className="border-2 px-3 py-1 hover:text-saffron border-saffron rounded-full">
                       Open Cerebro
                     </button>
                   </footer>
@@ -226,7 +226,7 @@ const Testimonials = () => {
                   </div>
 
                   <footer className="mt-2 text-sm font-medium text-gray-700 sm:mt-6">
-                    <button className="border-2 px-3 py-1 hover:text-saffron border-saffron rounded-md">
+                    <button className="border-2 px-3 py-1 hover:text-saffron border-saffron rounded-full">
                       Open Listing Analyzer
                     </button>
                   </footer>
@@ -252,7 +252,7 @@ const Testimonials = () => {
                   </div>
 
                   <footer className="mt-2 text-sm font-medium text-gray-700 sm:mt-6">
-                    <button className="border-2 px-3 py-1 hover:text-saffron border-saffron rounded-md">
+                    <button className="border-2 px-3 py-1 hover:text-saffron border-saffron rounded-full">
                       Open Listing Builder
                     </button>
                   </footer>

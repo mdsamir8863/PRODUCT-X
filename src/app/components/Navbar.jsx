@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Logo from "../../assets/PRODUCT-X-2.png";
 import Tools from "./Tools";
@@ -27,26 +27,31 @@ const Navbar = () => {
     setIsProfileMenuOpen(false);
   };
 
+  useEffect(() => {
+    setActiveTab(location.pathname);
+    setActiveTab(location.pathname.split("/")[1]);
+  }, [activeTab]);
+
   return (
     <>
       <div className="min-h-full relative">
         {/* popup box */}
         {popup ? (
           <div className="flex flex-col items-center justify-center p-5 absolute z-50 backdrop-blur-md w-full h-screen bg-[#00000052] ">
-            <div className="flex flex-col items-center gap-5 justify-center bg-white h-64 w-full md:w-[22rem] rounded-md">
+            <div className="flex flex-col items-center gap-5 justify-center bg-white h-64 w-full md:w-[22rem] rounded-full">
               <p className="font-bold text-2xl text-gray-800">Are you sure ?</p>
               <div className="flex items-center justify-center gap-7">
                 <Link
                   onClick={() => setPopup(false)}
                   to={"/login"}
-                  className="border border-red-600 hover:text-white hover:bg-red-500 font-bold px-10 rounded-md py-1"
+                  className="border border-red-600 hover:text-white hover:bg-red-500 font-bold px-10 rounded-full py-1"
                 >
                   Yes
                 </Link>
                 <Link
                   onClick={() => setPopup(false)}
                   to={"/dashboard"}
-                  className="border border-green-600 hover:text-white hover:bg-green-500 font-bold px-10 rounded-md py-1"
+                  className="border border-green-600 hover:text-white hover:bg-green-500 font-bold px-10 rounded-full py-1"
                 >
                   No
                 </Link>
@@ -72,7 +77,7 @@ const Navbar = () => {
                         activeTab === "dashboard"
                           ? " text-saffron border border-saffron"
                           : "text-dark-blue hover:border-saffron border-opacity-0  hover:border hover:text-saffron"
-                      } rounded-md px-3 py-2 text-sm font-medium`}
+                      } rounded-full px-3 py-2 text-sm font-medium`}
                       onClick={() => handleTabClick("dashboard")}
                       aria-current={
                         activeTab === "dashboard" ? "page" : undefined
@@ -86,7 +91,7 @@ const Navbar = () => {
                         activeTab === "profits"
                           ? " text-saffron border border-saffron"
                           : "text-dark-blue hover:border-saffron border-opacity-0  hover:border hover:text-saffron"
-                      } rounded-md px-3 py-2 text-sm font-medium`}
+                      } rounded-full px-3 py-2 text-sm font-medium`}
                       onClick={() => handleTabClick("profits")}
                       aria-current={
                         activeTab === "dashboard" ? "page" : undefined
@@ -99,7 +104,7 @@ const Navbar = () => {
                         activeTab === "tools"
                           ? " text-saffron border border-saffron flex items-center"
                           : "text-dark-blue hover:border-saffron border-opacity-0 flex items-center  hover:border hover:text-saffron"
-                      } rounded-md px-3 py-2 text-sm font-medium`}
+                      } rounded-full px-3 py-2 text-sm font-medium`}
                       onClick={() => handleTools("tools")}
                       aria-current={activeTab === "tools" ? "page" : undefined}
                     >
@@ -140,7 +145,7 @@ const Navbar = () => {
                         activeTab === "follow-up"
                           ? " text-saffron border border-saffron"
                           : "text-dark-blue hover:border-saffron border-opacity-0  hover:border hover:text-saffron"
-                      } rounded-md px-3 py-2 text-sm font-medium`}
+                      } rounded-full px-3 py-2 text-sm font-medium`}
                       onClick={() => handleTabClick("follow-up")}
                       aria-current={
                         activeTab === "dashboard" ? "page" : undefined
@@ -154,7 +159,7 @@ const Navbar = () => {
                         activeTab === "adtomic"
                           ? " text-saffron border border-saffron"
                           : "text-dark-blue hover:border-saffron border-opacity-0  hover:border hover:text-saffron"
-                      } rounded-md px-3 py-2 text-sm font-medium`}
+                      } rounded-full px-3 py-2 text-sm font-medium`}
                       onClick={() => handleTabClick("adtomic")}
                       aria-current={
                         activeTab === "adtomic" ? "page" : undefined
@@ -170,7 +175,7 @@ const Navbar = () => {
                         activeTab === "markettracker"
                           ? " text-saffron border border-saffron"
                           : "text-dark-blue hover:border-saffron border-opacity-0  hover:border hover:text-saffron"
-                      } rounded-md px-3 py-2 text-sm font-medium`}
+                      } rounded-full px-3 py-2 text-sm font-medium`}
                       onClick={() => handleTabClick("markettracker")}
                       aria-current={
                         activeTab === "markettracker" ? "page" : undefined
@@ -226,7 +231,7 @@ const Navbar = () => {
                     </button>
 
                     <div
-                      className={`profile-menu absolute right-0 z-50 mt-2 w-64  origin-top-right rounded-md bg-white py-3 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none ${
+                      className={`profile-menu absolute right-0 z-50 mt-3 w-64  origin-top-right rounded-md bg-white py-3 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none ${
                         isProfileMenuOpen ? "block" : "hidden"
                       }`}
                       role="menu"
@@ -241,7 +246,7 @@ const Navbar = () => {
                       <p className="border my-2"></p>
                       <Link
                         to="/profile"
-                        className="block px-4 py-2 text-sm text-gray-700 hover:border hover:border-saffron rounded-md mx-1"
+                        className="block px-4 py-2 text-sm text-gray-700 hover:border hover:border-saffron rounded-full mx-1"
                         role="menuitem"
                         tabIndex="-1"
                       >
@@ -249,7 +254,7 @@ const Navbar = () => {
                       </Link>
                       <Link
                         to="/plans-bills"
-                        className="block px-4 py-2 text-sm text-gray-700 hover:border hover:border-saffron rounded-md mx-1"
+                        className="block px-4 py-2 text-sm text-gray-700 hover:border hover:border-saffron rounded-full mx-1"
                         role="menuitem"
                         tabIndex="-1"
                       >
@@ -257,7 +262,7 @@ const Navbar = () => {
                       </Link>
                       <Link
                         to="/access-management"
-                        className="block px-4 py-2 text-sm text-gray-700 hover:border hover:border-saffron rounded-md mx-1"
+                        className="block px-4 py-2 text-sm text-gray-700 hover:border hover:border-saffron rounded-full mx-1"
                         role="menuitem"
                         tabIndex="-1"
                       >
@@ -265,7 +270,7 @@ const Navbar = () => {
                       </Link>
                       <Link
                         to="/connections"
-                        className="block px-4 py-2 text-sm text-gray-700 hover:border hover:border-saffron rounded-md mx-1"
+                        className="block px-4 py-2 text-sm text-gray-700 hover:border hover:border-saffron rounded-full mx-1"
                         role="menuitem"
                         tabIndex="-1"
                       >
@@ -273,7 +278,7 @@ const Navbar = () => {
                       </Link>
                       <Link
                         to="/settings"
-                        className="block px-4 py-2 text-sm text-gray-700 hover:border hover:border-saffron rounded-md mx-1"
+                        className="block px-4 py-2 text-sm text-gray-700 hover:border hover:border-saffron rounded-full mx-1"
                         role="menuitem"
                         tabIndex="-1"
                       >
@@ -282,7 +287,7 @@ const Navbar = () => {
                       <p className="border shadow-lg my-2"></p>
                       <Link
                         onClick={handleLogout}
-                        className="block px-4 py-2 text-sm text-gray-700 hover:border hover:border-saffron rounded-md mx-1"
+                        className="block px-4 py-2 text-sm text-gray-700 hover:border hover:border-saffron rounded-full mx-1"
                         role="menuitem"
                         tabIndex="-1"
                       >
@@ -295,7 +300,7 @@ const Navbar = () => {
               <div className="-mr-2 flex md:hidden">
                 <button
                   type="button"
-                  className="relative inline-flex items-center justify-center rounded-md  p-2 text-gray-400 hover:border-saffron border-opacity-0  hover:border hover:text-saffron focus:outline-none mbNav"
+                  className="relative inline-flex items-center justify-center rounded-full  p-2 text-gray-400 hover:border-saffron border-opacity-0  hover:border hover:text-saffron focus:outline-none mbNav"
                   aria-controls="mobile-menu"
                   aria-expanded={isProfileMenuOpen ? "true" : "false"}
                   onClick={toggleProfileMenu}
@@ -349,7 +354,7 @@ const Navbar = () => {
                   activeTab === "dashboard"
                     ? " text-saffron border border-saffron"
                     : "text-dark-blue hover:border-saffron border-opacity-0  hover:border hover:text-saffron"
-                } block rounded-md px-3 py-2 text-base font-medium`}
+                } block rounded-full px-3 py-2 text-base font-medium`}
                 aria-current={activeTab === "dashboard" ? "page" : undefined}
                 onClick={() => handleTabClick("dashboard")}
               >
@@ -360,7 +365,7 @@ const Navbar = () => {
                   activeTab === "tools"
                     ? " text-saffron border border-saffron flex items-center"
                     : "text-dark-blue hover:border-saffron border-opacity-0 flex items-center  hover:border hover:text-saffron"
-                } rounded-md px-3 py-2 text-sm font-medium`}
+                } rounded-full px-3 py-2 text-sm font-medium`}
                 onClick={() => handleTools("tools")}
                 aria-current={activeTab === "tools" ? "page" : undefined}
               >
@@ -418,19 +423,19 @@ const Navbar = () => {
               <div className="mt-3 px-2 space-y-1">
                 <Link
                   to="/profile"
-                  className="block rounded-md px-3 py-2 text-base font-medium text-gray-400 hover:border-saffron border-opacity-0  hover:border hover:text-saffron"
+                  className="block rounded-full px-3 py-2 text-base font-medium text-gray-400 hover:border-saffron border-opacity-0  hover:border hover:text-saffron"
                 >
                   Your Profile
                 </Link>
                 <Link
                   to="/settings"
-                  className="block rounded-md px-3 py-2 text-base font-medium text-gray-400 hover:border-saffron border-opacity-0  hover:border hover:text-saffron"
+                  className="block rounded-full px-3 py-2 text-base font-medium text-gray-400 hover:border-saffron border-opacity-0  hover:border hover:text-saffron"
                 >
                   Settings
                 </Link>
                 <Link
                   onClick={handleLogout}
-                  className="block rounded-md px-3 py-2 text-base font-medium text-gray-400 hover:border-saffron border-opacity-0  hover:border hover:text-saffron"
+                  className="block rounded-full px-3 py-2 text-base font-medium text-gray-400 hover:border-saffron border-opacity-0  hover:border hover:text-saffron"
                   role="menuitem"
                   tabIndex="-1"
                 >

@@ -77,7 +77,7 @@ const FollowUp = () => {
     <>
       <div>
         <button
-          className="fixed z-[999] bottom-5 left-4 border-2 backdrop-blur-md border-saffron  text-saffron hover:border-dark-saffron px-2 py-1 rounded-md"
+          className="fixed z-[999] bottom-5 left-4 border-2 backdrop-blur-md border-saffron  text-saffron hover:border-dark-saffron px-2 py-1 rounded-full"
           onClick={toggleSidebar}
         >
           {isSidebarOpen ? (
@@ -127,7 +127,7 @@ const FollowUp = () => {
               is the most effective approach to creating a stellar Amazon
               customer experience.
             </p>
-            <Link to={'/connections'} className="border border-saffron rounded-md p-2 bg-saffron text-white hover:bg-transparent hover:text-dark-blue duration-200">
+            <Link to={'/connections'} className="border border-saffron rounded-full p-2 bg-saffron text-white hover:bg-transparent hover:text-dark-blue duration-200">
               Connect your Seller Account
             </Link>
           </div>

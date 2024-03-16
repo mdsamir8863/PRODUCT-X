@@ -45,7 +45,7 @@ const Register = () => {
                 id="link-checkbox"
                 type="checkbox"
                 value=""
-                className="md:w-4 md:h-4 w-5 h-5 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-saffron "
+                className="md:w-4 md:h-4 w-5 h-5 text-saffron rounded-full focus:ring-saffron "
               />
               <label
                 htmlFor="link-checkbox"
@@ -54,7 +54,7 @@ const Register = () => {
                 I agree with the
                 <a
                   href="#"
-                  className="text-blue-600 mx-1 dark:text-saffron hover:text-dark-saffron hover:underline"
+                  className="text-saffron mx-1 dark:text-saffron hover:text-dark-saffron hover:underline"
                 >
                   Privacy Policy
                 </a>
@@ -67,7 +67,7 @@ const Register = () => {
                 </a>
               </label>
             </div>
-            <button className="uppercase bg-saffron font-bold hover:bg-dark-saffron text-white w-full rounded py-3">
+            <button className="uppercase bg-saffron font-bold hover:bg-dark-saffron text-white w-full rounded-full py-3">
               Sign Up
             </button>
           </div>

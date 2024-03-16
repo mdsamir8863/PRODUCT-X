@@ -2,6 +2,8 @@ import { useState } from "react";
 import ChatBoat from "../../components/ChatBoat";
 
 const IdentifyYourself = () => {
+  const [allowNext, setAllowNext] = useState();
+  
   const [clickedButton, setClickedButton] = useState("");
 
   const btnDetails = [
@@ -61,7 +63,7 @@ const IdentifyYourself = () => {
             return (
               <button
                 key={id}
-                className={`border rounded py-4 text-sm px-3 w-full text-left md:w-[475px] ${
+                className={`border rounded-full py-4 text-sm px-3 w-full text-left md:w-[475px] ${
                   isActive
                     ? "bg-saffron text-white"
                     : "text-gray-500 hover:border-saffron"
@@ -73,7 +75,7 @@ const IdentifyYourself = () => {
             );
           })}
           <div className="flex justify-end w-full border-b-0 border-l-0 border-r-0 border-t-2">
-            <button className=" bg-saffron  hover:bg-dark-saffron text-white rounded-md px-5 mt-2 py-2">
+            <button className=" bg-saffron  hover:bg-dark-saffron text-white rounded-full px-5 mt-2 py-2">
               Next
             </button>
           </div>
