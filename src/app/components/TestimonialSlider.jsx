@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 const TestimonialSlider = ({ testimonials }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -15,6 +15,15 @@ const TestimonialSlider = ({ testimonials }) => {
     );
   };
 
+  // Automatic slide every 2 seconds
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      nextSlide();
+    }, 2000);
+
+    return () => clearInterval(intervalId);
+  }, [currentIndex]);
+
   return (
     <>
       <div className=" rounded-md overflow-hidden flex items-center justify-center ">
@@ -25,7 +34,7 @@ const TestimonialSlider = ({ testimonials }) => {
               currentIndex === index ? "opacity-100" : "opacity-0"
             }`}
           >
-            <div className="bg-white w-full h-[18rem] relative border-2 border-saffron flex flex-col justify-center gap-4  p-4 rounded-md shadow-md">
+            <div className="bg-white w-full h-[20rem] md:h-[18rem] relative border-2 border-saffron flex flex-col items-start justify-start md:gap-4 gap-2  p-4 rounded-md shadow-md">
               <p className="text-lg border w-fit rounded-full p-1 text-saffron font-bold">
                 {testimonial.brand}
               </p>
@@ -36,7 +45,7 @@ const TestimonialSlider = ({ testimonials }) => {
         ))}
         <button
           onClick={prevSlide}
-          className="absolute right-2 bottom-20 cursor-pointer border hover:bg-saffron p-1 hover:text-white duration-300  rounded-full flex items-center justify-center"
+          className="absolute right-2 bottom-[17rem] md:bottom-24 cursor-pointer border hover:bg-saffron p-1 hover:text-white duration-300  rounded-full flex items-center justify-center"
         >
           <svg
             onClick={prevSlide}
@@ -56,7 +65,7 @@ const TestimonialSlider = ({ testimonials }) => {
         </button>
         <button
           onClick={nextSlide}
-          className="absolute right-[2.5rem] bottom-20 border hover:bg-saffron p-1 hover:text-white duration-300  rounded-full flex items-center justify-center"
+          className="absolute right-[2.5rem] bottom-[17rem] md:bottom-24 border hover:bg-saffron p-1 hover:text-white duration-300  rounded-full flex items-center justify-center"
         >
           <svg
             onClick={nextSlide}

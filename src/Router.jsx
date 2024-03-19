@@ -12,8 +12,9 @@ import FollowUp from "./app/screens/pages/FollowUp";
 import Adtomic from "./app/screens/pages/Adtomic";
 import Connections from "./app/screens/pages/Connections";
 import ChoosePlatform from "./app/screens/pages/ChoosePlatform";
-
+import GraphNav from "./app/components/graphCharts/OverallMarket";
 import ConnectAmazon from "./app/screens/pages/ConnectAmazon";
+import MarketPerformance from "./app/components/MarketList/MarketPerformance";
 
 const testimonialData = [
   {
@@ -32,7 +33,6 @@ const Layout = ({ children }) => (
   <>
     <Navbar />
     <div>{children}</div>
-   
   </>
 );
 
@@ -61,6 +61,14 @@ const Router = () => {
         <Route path="/adtomic" element={<Adtomic />} />
         <Route path="/connections" element={<Connections />} />
         {/* </Route> */}
+
+        {/* Graph component */}
+        {/* <Route path="/revenue" element={<Revenue />} />
+        <Route path="/units" element={<Units />} />
+        <Route path="/products" element={<Products />} />
+        <Route path="/brands" element={<Brands />} />
+        <Route path="/sellers" element={<Sellers />} />
+        <Route path="/price" element={<Price />} /> */}
 
         {/* Not found */}
         <Route path="*" element={<NotFoundPage />} />

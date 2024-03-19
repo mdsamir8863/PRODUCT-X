@@ -148,7 +148,7 @@ const Navbar = () => {
                       } rounded-full px-3 py-2 text-sm font-medium`}
                       onClick={() => handleTabClick("follow-up")}
                       aria-current={
-                        activeTab === "dashboard" ? "page" : undefined
+                        activeTab === "follow-up" ? "page" : undefined
                       }
                     >
                       Follow Up
@@ -393,6 +393,54 @@ const Navbar = () => {
                     />
                   )}
                 </svg>
+              </Link>
+              <Link
+                to="/profits"
+                className={`${
+                  activeTab === "profits"
+                    ? " text-saffron border border-saffron"
+                    : "text-dark-blue hover:border-saffron border-opacity-0  hover:border hover:text-saffron"
+                } block rounded-full px-3 py-2 text-base font-medium`}
+                aria-current={activeTab === "profits" ? "page" : undefined}
+                onClick={() => handleTabClick("profits")}
+              >
+                profits
+              </Link>
+              <Link
+                to="/follow-up"
+                className={`${
+                  activeTab === "follow-up"
+                    ? " text-saffron border border-saffron"
+                    : "text-dark-blue hover:border-saffron border-opacity-0  hover:border hover:text-saffron"
+                } block rounded-full px-3 py-2 text-base font-medium`}
+                aria-current={activeTab === "follow-up" ? "page" : undefined}
+                onClick={() => handleTabClick("follow-up")}
+              >
+                Follow-up
+              </Link>
+              <Link
+                to="/adtomic"
+                className={`${
+                  activeTab === "adtomic"
+                    ? " text-saffron border border-saffron"
+                    : "text-dark-blue hover:border-saffron border-opacity-0  hover:border hover:text-saffron"
+                } block rounded-full px-3 py-2 text-base font-medium`}
+                aria-current={activeTab === "adtomic" ? "page" : undefined}
+                onClick={() => handleTabClick("adtomic")}
+              >
+                Adtomic
+              </Link>
+              <Link
+                to="/markettracker"
+                className={`${
+                  activeTab === "markettracker"
+                    ? " text-saffron border border-saffron"
+                    : "text-dark-blue hover:border-saffron border-opacity-0  hover:border hover:text-saffron"
+                } block rounded-full px-3 py-2 text-base font-medium`}
+                aria-current={activeTab === "markettracker" ? "page" : undefined}
+                onClick={() => handleTabClick("markettracker")}
+              >
+                Market Tracker 360
               </Link>
 
               {isDropdownOpen && (

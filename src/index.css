@@ -5,8 +5,8 @@
 
 body,
 html {
-    background-color: #ffffff !important
-        /* color: white; */
+    background-color: #ffffff !important;
+    /* color: white; */
 }
 
 
@@ -103,7 +103,13 @@ html {
 
 
 
+.bg-style {
+    background: radial-gradient(#ff9933, #0038733d);
+    padding: 10px 30px;
+    border-radius: 50px;
+    display: flex;
 
+}
 
 a,
 .mbNav {

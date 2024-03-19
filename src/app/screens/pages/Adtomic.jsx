@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import TestimonialSlider from "../../components/Testimonial";
+import TestimonialSlider from "../../components/TestimonialSlider";
 
 const Sidebar = ({ isOpen, toggle }) => {
   return (
@@ -95,6 +95,7 @@ const Adtomic = () => {
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
   };
+
   return (
     <>
       <div className="h-full relative w-full">
@@ -136,10 +137,11 @@ const Adtomic = () => {
         </button>
         <Sidebar isOpen={isSidebarOpen} toggle={toggleSidebar} />
         <section className="flex flex-col w-full p-3">
-          <div className="lex items-start  flex-col justify-center mx-auto mt-3 gap-3 px-5 md:px-0 container bg-gray-50 pt-10 pb-32 rounded-md">
-            <div className="flex items-start md:flex-row flex-col justify-center gap-4">
-              <div className="flex flex-col items-start gap-3 md:w-1/2">
+          <div className="lex items-start  flex-col justify-center mx-auto mt-3 gap-3 px-5 md:px-0 border border-saffron  bg-gray-50 pt-10 pb-32 rounded-md">
+            <div className="flex items-start md:flex-row flex-col justify-around  gap-4">
+              <div className="flex flex-col items-start border-saffron  gap-3 md:w-1/2">
                 <img
+                  className="bg-style"
                   src="https://adtomic.helium10.com/react/assets/AdtomicLogo-c8605933.svg"
                   alt=""
                 />
@@ -195,10 +197,16 @@ const Adtomic = () => {
               <p className="bg-slate-100 rounded-full p-2 px-3 text-dark-blue border">
                 Clients logo
               </p>
+              <p className="bg-slate-100 rounded-full p-2 px-3 text-dark-blue border">
+                Clients logo
+              </p>
+              <p className="bg-slate-100 rounded-full p-2 px-3 text-dark-blue border">
+                Clients logo
+              </p>
             </div>
           </div>
           {/* box */}
-          <div className="flex -mt-10 bg-white items-center md:flex-row flex-col mx-auto gap-3 w-fit justify-around p-5 border rounded-md">
+          <div className="flex -mt-16 bg-white  border-saffron items-center md:flex-row flex-col mx-auto gap-3 w-fit justify-around p-5 border rounded-md">
             <div className="flex flex-col gap-3">
               <p className="font-bold text-dark-blue">Includes:</p>
               <p className="flex items-center text-dark-blue font-light text-sm">
@@ -361,8 +369,8 @@ const Adtomic = () => {
               </Link>
             </div>
           </div>
-          {/* box container */}
-          <div className="flex items-center justify-center flex-col gap-3 my-10">
+          {/* box  */}
+          <div className="flex items-center justify-center flex-col gap-3 my-10 ">
             <p className="font-bold text-2xl text-dark-blue">
               {" "}
               Create, manage and optimize campaigns with ease
@@ -370,9 +378,9 @@ const Adtomic = () => {
             <p className="">
               Adtomic is PPC software designed to maximize your advertising ROI
             </p>
-            <div className="grid md:grid-cols-4 grid-cols-1 sm:grid-cols-2 gap-3 md:flex-row flex-col container mt-5">
+            <div className="grid md:grid-cols-4 grid-cols-1 sm:grid-cols-2 gap-3 md:flex-row flex-col  mt-5">
               {/* box */}
-              <div className="flex flex-col items-start justify-center border rounded-md p-3 container gap-3">
+              <div className="flex flex-col items-start border-saffron  justify-center border rounded-md p-3  gap-3">
                 <svg
                   width="48"
                   height="48"
@@ -425,7 +433,7 @@ const Adtomic = () => {
                 </p>
               </div>
               {/* box */}
-              <div className="flex flex-col items-start justify-center border rounded-md p-3 container gap-3">
+              <div className="flex flex-col items-start border-saffron  justify-center border rounded-md p-3  gap-3">
                 <svg
                   width="48"
                   height="48"
@@ -478,7 +486,7 @@ const Adtomic = () => {
                 </p>
               </div>
               {/* box */}
-              <div className="flex flex-col items-start justify-center border rounded-md p-3 container gap-3">
+              <div className="flex flex-col items-start border-saffron  justify-center border rounded-md p-3  gap-3">
                 <svg
                   width="48"
                   height="48"
@@ -531,7 +539,7 @@ const Adtomic = () => {
                 </p>
               </div>
               {/* box */}
-              <div className="flex flex-col items-start justify-center border rounded-md p-3 container gap-3">
+              <div className="flex flex-col items-start border-saffron  justify-center border rounded-md p-3  gap-3">
                 <svg
                   width="48"
                   height="48"
@@ -586,9 +594,19 @@ const Adtomic = () => {
             </div>
           </div>
 
-          <div className="flex items-start overflow-scroll md:overflow-hidden pb-10 overflow-x-hidden  flex-col justify-center mx-auto my-6 py-10 gap-3  md:px-0 container bg-gray-50 p-5 rounded-md">
-            <div className="flex items-center md:flex-row flex-col w-full sm:p-5 justify-evenly gap-4">
-              <div className="flex flex-col items-start  gap-3 md:w-[22rem]">
+          <div
+            style={{
+              overflow: "scroll",
+              scrollbarWidth: "none",
+              msOverflowStyle: "none",
+              "&::WebkitScrollbar": {
+                display: "none",
+              },
+            }}
+            className="flex items-start border border-saffron   overflow-scroll md:overflow-hidden pb-10 overflow-x-hidden  flex-col justify-center mx-auto my-6 md:py-10 gap-3  md:px-0 w-full bg-gray-50 p-5 rounded-md"
+          >
+            <div className="flex items-center md:flex-row flex-col w-full sm:p-5 justify-around gap-4">
+              <div className="flex flex-col items-start border-saffron gap-3 md:w-[22rem]">
                 <p className="text-dark-blue font-bold text-2xl">
                   Adtomic drives results for sellers, brands, and agencies
                 </p>
@@ -668,7 +686,7 @@ const Adtomic = () => {
                   </button>
                 </div>
               </div>
-              <div className="w-full md:w-2/5 md:mt-0 mt-36  relative">
+              <div className="w-full h-fit  md:w-2/5 md:mt-0 mt-44 pb-40 md:pb-0  relative md:mb-0">
                 <TestimonialSlider testimonials={testimonialData} />
               </div>
             </div>
