@@ -117,12 +117,24 @@ a,
 }
 
 
+#popUP {
+    animation: drop 2s ease-out infinite;
+    transition: .5s ease-in-out
+}
 
 
 
 
+@keyframes drop {
+    to {
+        transform: translateX(0%);
+    }
 
+    from {
+        transform: translateX(0%);
+    }
 
+}
 
 @keyframes arrow-move {
     0% {

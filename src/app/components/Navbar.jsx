@@ -37,9 +37,44 @@ const Navbar = () => {
       <div className="min-h-full relative">
         {/* popup box */}
         {popup ? (
-          <div className="flex flex-col items-center justify-center p-5 absolute z-50 backdrop-blur-md w-full h-screen bg-[#00000052] ">
-            <div className="flex flex-col items-center gap-5 justify-center bg-white h-64 w-full md:w-[22rem] rounded-full">
-              <p className="font-bold text-2xl text-gray-800">Are you sure ?</p>
+          <div className="flex flex-col items-center justify-center p-5 absolute z-50 backdrop-blur-sm w-full h-screen bg-[#00000052] ">
+            <div
+              id="popUP"
+              className="flex flex-col z-50 items-center gap-5 justify-center  bg-dark-blue text-saffron h-fit py-5 w-full shadow shadow-saffron md:w-[22rem] rounded-md"
+            >
+              {/* cross icon */}
+              <svg
+                onClick={() => setPopup(false)}
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={1.5}
+                stroke="currentColor"
+                className="w-8 h-8 absolute right-1 top-1 hover:text-red-500 cursor-pointer "
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="m9.75 9.75 4.5 4.5m0-4.5-4.5 4.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+                />
+              </svg>
+              {/* logou icon */}
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={1.5}
+                stroke="currentColor"
+                className="w-10 h-10 text-red-500"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M5.636 5.636a9 9 0 1 0 12.728 0M12 3v9"
+                />
+              </svg>
+
+              <p className="font-bold text-2xl text-saffron">Are you sure ?</p>
               <div className="flex items-center justify-center gap-7">
                 <Link
                   onClick={() => setPopup(false)}
@@ -65,7 +100,7 @@ const Navbar = () => {
             <div className="flex h-16 items-center justify-between">
               <div className="flex items-center">
                 <div className="flex-shrink-0">
-                  <Link>
+                  <Link to={"/dashboard"}>
                     <img className="h-12 w-16" src={Logo} alt="Your Company" />
                   </Link>
                 </div>
@@ -437,7 +472,9 @@ const Navbar = () => {
                     ? " text-saffron border border-saffron"
                     : "text-dark-blue hover:border-saffron border-opacity-0  hover:border hover:text-saffron"
                 } block rounded-full px-3 py-2 text-base font-medium`}
-                aria-current={activeTab === "markettracker" ? "page" : undefined}
+                aria-current={
+                  activeTab === "markettracker" ? "page" : undefined
+                }
                 onClick={() => handleTabClick("markettracker")}
               >
                 Market Tracker 360
