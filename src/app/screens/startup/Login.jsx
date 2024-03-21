@@ -36,7 +36,7 @@ const Login = () => {
                   id="link-checkbox"
                   type="checkbox"
                   value=""
-                  className="md:w-4 md:h-4 w-5 h-5 text-saffron hover:text-dark-saffron bg-gray-100 border-gray-300 rounded-full  "
+                  className="md:w-4 accent-saffron md:h-4 w-5 h-5 text-saffron hover:text-dark-saffron bg-gray-100 border-gray-300 rounded-full  "
                 />
                 <label
                   htmlFor="link-checkbox"
@@ -49,9 +49,9 @@ const Login = () => {
                 Forget Password?
               </Link>
             </div>
-            <button onClick={()=>{}} className="uppercase bg-saffron font-bold hover:bg-dark-saffron text-white w-full rounded-full py-3">
+            <Link to={'/dashboard'} onClick={()=>{}} className="uppercase text-center bg-saffron font-bold hover:bg-dark-saffron text-white w-full rounded-full py-3">
               Log in
-            </button>
+            </Link>
           </div>
           <p className="">
             New to Product X?

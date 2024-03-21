@@ -127,9 +127,13 @@ const Profit = () => {
               products. Easy, smarter decision-making is just a few clicks away.
             </p>
             <div className="flex flex-wrap md:flex-nowrap items-center w-full gap-4">
-              <button className="uppercase bg-saffron font-bold hover:bg-dark-saffron text-white w-full rounded-full py-3">
+              <Link
+                to={"/choosePlatform"}
+                className="uppercase text-center bg-saffron font-bold hover:bg-dark-saffron text-white w-full rounded-full py-3"
+              >
                 Connect Your Seller Account
-              </button>
+              </Link>
+              
               <Link className="uppercase border text-dark-blue text-center hover:text-white border-saffron font-bold hover:bg-dark-blue   w-full rounded-full py-3">
                 Preview Demo data
               </Link>

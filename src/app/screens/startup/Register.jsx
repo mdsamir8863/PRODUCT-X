@@ -67,9 +67,11 @@ const Register = () => {
                 </a>
               </label>
             </div>
-            <button className="uppercase bg-saffron font-bold hover:bg-dark-saffron text-white w-full rounded-full py-3">
-              Sign Up
-            </button>
+            <Link className="w-full" to={'/onboarding'}>
+              <button className="uppercase bg-saffron font-bold hover:bg-dark-saffron text-white w-full rounded-full py-3">
+                Sign Up
+              </button>
+            </Link>
           </div>
           <p className="">
             Already have an account ?

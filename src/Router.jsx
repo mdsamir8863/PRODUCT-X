@@ -15,6 +15,9 @@ import ChoosePlatform from "./app/screens/pages/ChoosePlatform";
 import GraphNav from "./app/components/graphCharts/OverallMarket";
 import ConnectAmazon from "./app/screens/pages/ConnectAmazon";
 import MarketPerformance from "./app/components/MarketList/MarketPerformance";
+import AccountId from "./app/screens/startup/AccountId";
+import SalesVolume from "./app/screens/pages/SalesVolume";
+import Pricing from "./app/screens/pages/Pricing";
 
 const testimonialData = [
   {
@@ -45,6 +48,9 @@ const Router = () => {
         {/* Auth pages without Navbar */}
         <Route path="/register" element={<Register />} />
         <Route path="/onboarding" element={<IdentifyYourself />} />
+        <Route path="/accountid" element={<AccountId />} />
+        <Route path="/salesvolume" element={<SalesVolume />} />
+        <Route path="/pricing" element={<Pricing />} />
         <Route path={"/"} element={<Navigate to={"/login"} />} />
         <Route path="/login" element={<Login />} />
         <Route path="/login/forget" element={<ForgetPassword />} />
