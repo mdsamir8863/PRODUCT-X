@@ -68,7 +68,9 @@ html {}
 
 
 
-
+.form-input {
+    outline: none;
+}
 
 
 

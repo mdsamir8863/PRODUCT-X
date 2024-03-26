@@ -102,7 +102,7 @@ const AccountId = () => {
             with others.
           </p>
           {/* </div> */}
-          <div className="flex justify-between items-center border-t-2 p-5 w-full">
+          <div className="flex flex-wrap md:flex-nowrap justify-between items-center border-t-2 p-5 w-full">
             <Link
               to={"/onboarding"}
               className="border-2 hover:shadow-md hover:shadow-saffron border-saffron text-dark-blue  p-2 px-5 rounded-full"

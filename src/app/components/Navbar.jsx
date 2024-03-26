@@ -21,6 +21,7 @@ const Navbar = () => {
   const handleTools = (tabName) => {
     setActiveTab(tabName);
     setIsDropdownOpen(!isDropdownOpen);
+    setIsProfileMenuOpen(false)
   };
   const handleLogout = () => {
     setPopup(true);
@@ -312,7 +313,15 @@ const Navbar = () => {
                         Connections
                       </Link>
                       <Link
-                        to="/settings"
+                        to="/affiliate"
+                        className="block px-4 py-2 text-sm text-gray-700 hover:border hover:border-saffron rounded-full mx-1"
+                        role="menuitem"
+                        tabIndex="-1"
+                      >
+                        Become An Affiliate
+                      </Link>
+                      <Link
+                        to="/profile"
                         className="block px-4 py-2 text-sm text-gray-700 hover:border hover:border-saffron rounded-full mx-1"
                         role="menuitem"
                         tabIndex="-1"
@@ -326,7 +335,7 @@ const Navbar = () => {
                         role="menuitem"
                         tabIndex="-1"
                       >
-                        Sign out
+                        Log out
                       </Link>
                     </div>
                   </div>
