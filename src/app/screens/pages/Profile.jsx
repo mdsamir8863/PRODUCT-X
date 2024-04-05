@@ -3,7 +3,17 @@ import { countries } from "countries-list";
 import ChatBoat from "../../components/ChatBoat";
 import PrivacyPolicy from "../../components/PrivacyPolicy";
 import { Link } from "react-router-dom";
+import { SnackbarProvider, enqueueSnackbar, useSnackbar } from "notistack";
 // import AddressPhoneNumber from "../../components/AddressPhoneNumber";
+
+const MyButton = () => {
+  const { enqueueSnackbar, closeSnackbar } = useSnackbar();
+  return (
+    <Button onClick={() => enqueueSnackbar("I love hooks")}>
+      Show snackbar
+    </Button>
+  );
+};
 
 const Profile = () => {
   const [popupForm, setPopupForm] = useState(false);
@@ -59,6 +69,13 @@ const Profile = () => {
   return (
     <>
       <section className="flex flex-col gap-5 md:p-5 relative">
+      {/* hotstack */}
+        {/* <div>
+          <SnackbarProvider />
+          <button onClick={() => enqueueSnackbar("That was easy!")}>
+            Show snackbar
+          </button>
+        </div> */}
         {/* form pop up */}
         {popupForm && (
           <div className="fixed inset-0 z-50 overflow-y-auto bg-[#00000082]">
@@ -97,7 +114,7 @@ const Profile = () => {
                   onBlur={handleBlur}
                   className={
                     errors.name
-                      ? "animate-bouncec border-2 border-led-600 rounded-full py-1 px-5 w-full"
+                      ? "animate-pulse border-2 border-red-600 rounded-full py-1 px-5 w-full"
                       : "form-input border-2 border-dark-blue rounded-full py-1 px-5 w-full"
                   }
                   required
@@ -115,7 +132,7 @@ const Profile = () => {
                   onBlur={handleBlur}
                   className={
                     errors.address
-                      ? "animate-bouncec border-2 border-led-600 rounded-full py-1 px-5 w-full"
+                      ? "animate-pulse border-2 border-red-600 rounded-full py-1 px-5 w-full"
                       : "form-input border-2 border-dark-blue rounded-full py-1 px-5 w-full"
                   }
                   required
@@ -135,7 +152,7 @@ const Profile = () => {
                     onBlur={handleBlur}
                     className={
                       errors.city
-                        ? "animate-bouncec border-2 border-led-600 rounded-full py-1 px-5 w-full"
+                        ? "animate-pulse border-2 border-red-600 rounded-full py-1 px-5 w-full"
                         : "form-input border-2 border-dark-blue rounded-full py-1 px-5 w-full"
                     }
                     required
@@ -153,7 +170,7 @@ const Profile = () => {
                     onBlur={handleBlur}
                     className={
                       errors.state
-                        ? "animate-bouncec border-2 border-led-600 rounded-full py-1 px-5 w-full"
+                        ? "animate-pulse border-2 border-red-600 rounded-full py-1 px-5 w-full"
                         : "form-input border-2 border-dark-blue rounded-full py-1 px-5 w-full"
                     }
                     required
@@ -173,7 +190,7 @@ const Profile = () => {
                     onBlur={handleBlur}
                     className={
                       errors.zip
-                        ? "animate-bouncec border-2 border-led-600 rounded-full py-1 px-5 w-full"
+                        ? "animate-pulse border-2 border-red-600 rounded-full py-1 px-5 w-full"
                         : "form-input border-2 border-dark-blue rounded-full py-1 px-5 w-full"
                     }
                     required
@@ -190,7 +207,7 @@ const Profile = () => {
                     onBlur={handleBlur}
                     className={
                       errors.country
-                        ? "animate-bouncecs border-2 border-led-600 rounded-full py-1.5 px-5 w-full text-dark-blue"
+                        ? "animate-pulses border-2 border-red-600 rounded-full py-1.5 px-5 w-full text-dark-blue"
                         : "form-input border-2 border-dark-blue rounded-full py-1.5 px-5 w-full text-dark-blue"
                     }
                     required
@@ -220,7 +237,7 @@ const Profile = () => {
                   onBlur={handleBlur}
                   className={
                     errors.phoneNumber
-                      ? "animate-bouncec border-2 border-led-600 rounded-full py-1 px-5 w-full"
+                      ? "animate-pulse border-2 border-red-600 rounded-full py-1 px-5 w-full"
                       : "form-input border-2 border-dark-blue rounded-full py-1 px-5 w-full"
                   }
                   required
@@ -284,18 +301,14 @@ const Profile = () => {
               <p className="w-full text-start">
                 PRIMARY EMAIL
                 <Link
-                to={'/change-email'}
+                  to={"/change-email"}
                   className="text-saffron font-bold cursor-pointer"
-                  
                 >
                   (Change)
                 </Link>
                 <br />
                 ansari131211@gmail.com
-                <span
-                  className="text-saffron font-bold cursor-pointer"
-                  onClick={() => setPopupForm(true)}
-                >
+                <span className="text-saffron font-bold cursor-pointer">
                   (Confirm)
                 </span>
               </p>
@@ -303,12 +316,12 @@ const Profile = () => {
             <div className="md:border-l pl-2 text-sm">
               <p>
                 PASSWORD
-                <button
+                <Link
+                  to={"/change-password"}
                   className="text-saffron font-bold"
-                  onClick={() => setPopupForm(true)}
                 >
                   (Click here to enter)
-                </button>
+                </Link>
                 <br />
                 ********
               </p>
@@ -322,8 +335,8 @@ const Profile = () => {
             </span>
             <span className="border-b-2 ps-0 border-saffron w-full"></span>
           </div>
-          <div className="flex gap-5 w-full  p-5 justify-start ">
-            <div className="flex flex-col gap-3 w-1/2">
+          <div className="flex gap-5 w-full md:flex-row flex-col  p-5 justify-start ">
+            <div className="flex flex-col gap-3 w-full md:w-1/2">
               <p className="text-[12px] text-gray-500">
                 Two-factor authentication requires anyone who tries to log into
                 your account to have two things: an access code from text or
@@ -378,6 +391,9 @@ const Profile = () => {
                 />
                 Authenticator App
               </label>
+              <button className="text-white border-2 rounded-full px-3 py-1 hover:bg-transparent hover:text-dark-blue bg-dark-blue w-fit hover:border-saffron">
+                Save
+              </button>
             </div>
           </div>
         </div>

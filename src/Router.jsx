@@ -20,6 +20,8 @@ import SalesVolume from "./app/screens/pages/SalesVolume";
 import Pricing from "./app/screens/pages/Pricing";
 import ResetPass from "./app/screens/startup/ResetPass";
 import ChangeEmail from "./app/components/auth/ChangeEmail";
+import ChangePass from "./app/components/auth/ChangePass";
+import AccessManagement from "./app/screens/pages/AccessManagement";
 
 const Router = () => {
   const location = useLocation();
@@ -35,7 +37,9 @@ const Router = () => {
       "/login/forget",
       "/choosePlatform",
       "/connectAmazon",
-      "/changeEmail",
+      "/change-email",
+      "/change-password",
+      // "/access-management",
     ];
     return authPages.includes(location.pathname);
   };
@@ -57,6 +61,7 @@ const Router = () => {
         <Route path="/choosePlatform" element={<ChoosePlatform />} />
         <Route path="/connectAmazon" element={<ConnectAmazon />} />
         <Route path="/change-email" element={<ChangeEmail />} />
+        <Route path="/change-password" element={<ChangePass />} />
 
         {/* Screens with Navbar */}
         <Route path="/dashboard" element={<Dashboard />} />
@@ -68,6 +73,7 @@ const Router = () => {
         <Route path="/profile" element={<Profile />} />
         <Route path="/address" element={<AddressPhoneNumber />} />
         <Route path="/reset" element={<ResetPass />} />
+        <Route path="/access-management" element={<AccessManagement />} />
 
         {/* Not found */}
         <Route path="*" element={<NotFoundPage />} />

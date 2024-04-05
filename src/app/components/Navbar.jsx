@@ -21,7 +21,7 @@ const Navbar = () => {
   const handleTools = (tabName) => {
     setActiveTab(tabName);
     setIsDropdownOpen(!isDropdownOpen);
-    setIsProfileMenuOpen(false)
+    setIsProfileMenuOpen(false);
   };
   const handleLogout = () => {
     setPopup(true);
@@ -281,6 +281,7 @@ const Navbar = () => {
                       </p>
                       <p className="border my-2"></p>
                       <Link
+                        onClick={() => setIsProfileMenuOpen(false)}
                         to="/profile"
                         className="block px-4 py-2 text-sm text-gray-700 hover:border hover:border-saffron rounded-full mx-1"
                         role="menuitem"
@@ -289,6 +290,7 @@ const Navbar = () => {
                         Your Profile
                       </Link>
                       <Link
+                        onClick={() => setIsProfileMenuOpen(false)}
                         to="/plans-bills"
                         className="block px-4 py-2 text-sm text-gray-700 hover:border hover:border-saffron rounded-full mx-1"
                         role="menuitem"
@@ -297,6 +299,7 @@ const Navbar = () => {
                         Plans & Bills
                       </Link>
                       <Link
+                        onClick={() => setIsProfileMenuOpen(false)}
                         to="/access-management"
                         className="block px-4 py-2 text-sm text-gray-700 hover:border hover:border-saffron rounded-full mx-1"
                         role="menuitem"
@@ -305,6 +308,7 @@ const Navbar = () => {
                         Access Management
                       </Link>
                       <Link
+                        onClick={() => setIsProfileMenuOpen(false)}
                         to="/connections"
                         className="block px-4 py-2 text-sm text-gray-700 hover:border hover:border-saffron rounded-full mx-1"
                         role="menuitem"
@@ -313,6 +317,7 @@ const Navbar = () => {
                         Connections
                       </Link>
                       <Link
+                        onClick={() => setIsProfileMenuOpen(false)}
                         to="/affiliate"
                         className="block px-4 py-2 text-sm text-gray-700 hover:border hover:border-saffron rounded-full mx-1"
                         role="menuitem"
@@ -321,6 +326,7 @@ const Navbar = () => {
                         Become An Affiliate
                       </Link>
                       <Link
+                        onClick={() => setIsProfileMenuOpen(false)}
                         to="/profile"
                         className="block px-4 py-2 text-sm text-gray-700 hover:border hover:border-saffron rounded-full mx-1"
                         role="menuitem"

@@ -11,7 +11,7 @@ const ChangeEmail = () => {
         <section className="flex items-center h-screen w-full justify-center">
           <div className="flex flex-col items-center justify-center gap-5 w-full p-5 md:w-1/2">
             <Logo />
-            <p className="text-dark-blue  text-2xl">Code verification</p>
+            <p className="text-dark-blue  text-2xl  md:text-4xl">Code verification</p>
             <div className="flex flex-col items-start gap-2 w-full">
               <label className="text-gray-700" htmlFor="name">
                 Password
@@ -62,7 +62,7 @@ const ChangeEmail = () => {
         <section className="flex items-center h-screen w-full justify-center">
           <div className="flex flex-col items-center justify-center gap-5 w-full p-5 md:w-1/2">
             <Logo />
-            <p className="text-dark-blue  text-2xl">Code verification</p>
+            <p className="text-dark-blue  text-2xl  md:text-4xl">Code verification</p>
             <div className="w-full">
               <p className="text-dark-blue text-[12px] font-light mb-2">
                 Verification code was sent to <br /> an**********@g****.com
