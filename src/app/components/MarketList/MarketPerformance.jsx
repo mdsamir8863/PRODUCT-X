@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 const MarketPerformance = () => {
   const [activeTab, setActiveTab] = useState("home");
   const [btnColor, setBtnColor] = useState("");
-  
 
   const handleButtonClick = (color) => {
     setBtnColor(color);
@@ -184,8 +183,8 @@ const MarketPerformance = () => {
         <div className="border w-0  "></div>
         <table className="w-full md:w-1/2 border text-sm text-left rtl:text-right text-dark-blue ">
           <thead className="text-xs   dark:text-gray-400">
-            <p className="text-dark-blue w-fit py-3 font-bold pl-2 text-xl">
-              Revenue
+            <p className="text-dark-blue w-[10rem] py-3 font-bold pl-2 text-xl">
+              Unit Sales
             </p>
             <tr className="bg-dark-blue text-saffron">
               <th scope="col" className="pl-3">
@@ -239,7 +238,6 @@ const MarketPerformance = () => {
           </tbody>
         </table>
       </div>
-     
     </section>
   );
 };

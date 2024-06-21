@@ -22,6 +22,7 @@ import ResetPass from "./app/screens/startup/ResetPass";
 import ChangeEmail from "./app/components/auth/ChangeEmail";
 import ChangePass from "./app/components/auth/ChangePass";
 import AccessManagement from "./app/screens/pages/AccessManagement";
+import Affiliate from './app/screens/pages/Affiliate'
 
 const Router = () => {
   const location = useLocation();
@@ -39,6 +40,7 @@ const Router = () => {
       "/connectAmazon",
       "/change-email",
       "/change-password",
+      "/affiliate",
       // "/access-management",
     ];
     return authPages.includes(location.pathname);
@@ -62,6 +64,7 @@ const Router = () => {
         <Route path="/connectAmazon" element={<ConnectAmazon />} />
         <Route path="/change-email" element={<ChangeEmail />} />
         <Route path="/change-password" element={<ChangePass />} />
+        <Route path="/affiliate" element={<Affiliate />} />
 
         {/* Screens with Navbar */}
         <Route path="/dashboard" element={<Dashboard />} />

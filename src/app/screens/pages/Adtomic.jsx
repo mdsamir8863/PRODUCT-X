@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import TestimonialSlider from "../../components/TestimonialSlider";
+import PrivacyPolicy from "../../components/PrivacyPolicy";
+import ChatBoats from "../../components/ChatBoat";
 
 const Sidebar = ({ isOpen, toggle }) => {
   return (
@@ -693,6 +695,8 @@ const Adtomic = () => {
           </div>
         </section>
       </div>
+      <PrivacyPolicy />
+      <ChatBoats />
     </>
   );
 };

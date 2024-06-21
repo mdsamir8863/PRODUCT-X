@@ -8,14 +8,14 @@ import Brands from "./Brands";
 import Sellers from "./Sellers";
 import Select from "react-select";
 
-const groupByOpt = [
+const groupBy = [
   { value: "None", label: "None" },
   { value: "Product", label: "Product" },
   { value: "Brand", label: "Brand" },
   { value: "Me vs. Competitors", label: "Me vs. Competitors" },
   { value: "Seller type", label: "Seller type" },
 ];
-const HistoricalOpt = [
+const SelectYear = [
   { value: "Year over Year", label: "Year over Year" },
   { value: "Month over Month", label: "Month over Month" },
   { value: "Week over Week", label: "Week over Week" },
@@ -28,6 +28,30 @@ const OverallMarket = () => {
   const [groupBtn1, setGroupBtn1] = useState("W");
   const [groupBtn2, setGroupBtn2] = useState("G1");
   const [groupBtn3, setGroupBtn3] = useState("$");
+  const [revenueData, setRevenueData] = useState({
+    labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
+    revenue: [1000, 1500, 1200, 1800, 2000, 2500], // Example revenue data
+  });
+  const [unitsData, setUnitsData] = useState({
+    labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
+    units: [50, 60, 55, 70, 75, 80],
+  });
+  const [productsData, setProductsData] = useState({
+    labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
+    products: [50, 60, 55, 70, 75, 80],
+  });
+  const [brandsData, setBrandsData] = useState({
+    labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
+    brands: [50, 60, 55, 70, 75, 80],
+  });
+  const [sellersData, setSellersData] = useState({
+    labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
+    sellers: [50, 60, 55, 70, 75, 80],
+  });
+  const [priceData, setPriceData] = useState({
+    labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
+    price: [50, 60, 55, 70, 75, 80],
+  });
 
   const handleGroupBtn1 = (value) => {
     setGroupBtn1(value);
@@ -131,21 +155,20 @@ const OverallMarket = () => {
         </div>
       </nav>
       <div className="flex w-full items-center justify-start gap-4 md:flex-row flex-col md:justify-between my-5 mb-8">
-      {/* left side */}
+        {/* left side */}
         <div className="flex w-full items-center justify-start gap-4 md:flex-row flex-col">
           {" "}
           <Select
             value={selectedOpt1}
             onChange={handleSelected}
-            options={groupByOpt}
+            options={groupBy}
             placeholder="Group By"
-              className="md:w-64 w-full"
+            className="md:w-64 w-full"
             styles={{
               control: (provided) => ({
                 ...provided,
                 border: "1px solid #FF9933",
                 borderRadius: "0.375rem",
-               
               }),
               indicatorSeparator: () => ({}),
               clearIndicator: () => ({}),
@@ -173,16 +196,15 @@ const OverallMarket = () => {
           <Select
             value={selectedOpt2}
             onChange={handleSelected2}
-            options={HistoricalOpt}
+            options={SelectYear}
             placeholder="Historical Comparison"
             // isClearable
-              className="md:w-64 w-full"
+            className="md:w-64 w-full"
             styles={{
               control: (provided) => ({
                 ...provided,
                 border: "1px solid #FF9933",
                 borderRadius: "0.375rem",
-               
               }),
               indicatorSeparator: () => ({}),
               clearIndicator: () => ({}),
@@ -300,14 +322,24 @@ const OverallMarket = () => {
           </div>
         </div>
       </div>
-      <div className="flex">{activeTab === "Revenue" ? <Revenue /> : " "}</div>
-      <div className="flex">{activeTab === "Units" ? <Units /> : " "}</div>
-      <div className="flex">
-        {activeTab === "Products" ? <Products /> : " "}
+      <div className="flex w-full border">
+        {activeTab === "Revenue" && <Revenue data={revenueData} />}
       </div>
-      <div className="flex">{activeTab === "Brands" ? <Brands /> : " "}</div>
-      <div className="flex">{activeTab === "Sellers" ? <Sellers /> : " "}</div>
-      <div className="flex">{activeTab === "Price" ? <Price /> : " "}</div>
+      <div className="flex w-full border">
+        {activeTab === "Units" && <Units data={unitsData} />}
+      </div>
+      <div className="flex w-full border">
+        {activeTab === "Products" && <Products data={productsData} />}
+      </div>
+      <div className="flex w-full border">
+        {activeTab === "Brands" && <Brands data={brandsData} />}
+      </div>
+      <div className="flex w-full border">
+        {activeTab === "Sellers" && <Sellers data={sellersData} />}
+      </div>
+      <div className="flex w-full border">
+        {activeTab === "Price" && <Price data={priceData} />}
+      </div>
     </section>
   );
 };

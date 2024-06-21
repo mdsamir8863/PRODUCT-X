@@ -16,6 +16,8 @@ const Register = () => {
               Name
             </label>
             <input
+              required
+              autoComplete="false"
               id="name"
               className="border border-black rounded-sm p-2 w-full outline-none"
               type="text"
@@ -25,6 +27,8 @@ const Register = () => {
               Email
             </label>
             <input
+              required
+              autoComplete="false"
               id="email"
               className="border border-black rounded-sm p-2 w-full outline-none "
               type="text"
@@ -34,18 +38,22 @@ const Register = () => {
               Password
             </label>
             <input
+              autoComplete="false"
               id="password"
               className="border border-black rounded-sm p-2 w-full outline-none "
               type="password"
               placeholder="Choose a strong password"
+              required
             />
 
             <div className="flex items-center gap-2 ">
               <input
+                autoComplete="false"
                 id="link-checkbox"
                 type="checkbox"
                 value=""
                 className="md:w-4 md:h-4 w-5 h-5 text-saffron rounded-full focus:ring-saffron "
+                required
               />
               <label
                 htmlFor="link-checkbox"
@@ -67,7 +75,7 @@ const Register = () => {
                 </a>
               </label>
             </div>
-            <Link className="w-full" to={'/onboarding'}>
+            <Link className="w-full" to={"/onboarding"}>
               <button className="uppercase bg-saffron font-bold hover:bg-dark-saffron text-white w-full rounded-full py-3">
                 Sign Up
               </button>

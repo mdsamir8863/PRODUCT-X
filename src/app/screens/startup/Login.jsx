@@ -19,6 +19,8 @@ const Login = () => {
               className="border border-black rounded-sm p-2 w-full outline-none "
               type="text"
               placeholder="Please enter your email"
+              required
+              autoComplete="false"
             />
             <label className="text-gray-700" htmlFor="password">
               Password
@@ -28,6 +30,8 @@ const Login = () => {
               className="border border-black rounded-sm p-2 w-full outline-none "
               type="password"
               placeholder="Please enter your password"
+              required
+              autoComplete="false"
             />
 
             <div className="flex w-full justify-between  items-center gap-2 mt-1 mb-2">
@@ -35,6 +39,8 @@ const Login = () => {
                 <input
                   id="link-checkbox"
                   type="checkbox"
+                  required
+                  autoComplete="false"
                   value=""
                   className="md:w-4 accent-saffron md:h-4 w-5 h-5 text-saffron hover:text-dark-saffron bg-gray-100 border-gray-300 rounded-full  "
                 />
@@ -45,17 +51,27 @@ const Login = () => {
                   Remember Me
                 </label>
               </div>
-              <Link to={"/login/forget"} className="text-saffron hover:text-dark-saffron">
+              <Link
+                to={"/login/forget"}
+                className="text-saffron hover:text-dark-saffron"
+              >
                 Forget Password?
               </Link>
             </div>
-            <Link to={'/dashboard'} onClick={()=>{}} className="uppercase text-center bg-saffron font-bold hover:bg-dark-saffron text-white w-full rounded-full py-3">
+            <Link
+              to={"/dashboard"}
+              onClick={() => {}}
+              className="uppercase text-center bg-saffron font-bold hover:bg-dark-saffron text-white w-full rounded-full py-3"
+            >
               Log in
             </Link>
           </div>
           <p className="">
             New to Product X?
-            <Link to={"/register"} className="text-saffron hover:text-dark-saffron ms-1">
+            <Link
+              to={"/register"}
+              className="text-saffron hover:text-dark-saffron ms-1"
+            >
               Sign Up Now
             </Link>
           </p>
